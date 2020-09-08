@@ -13,11 +13,15 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 // your code goes here
 
+
+
 app.get('/',(req,res)=>{
-    res.writeHead(200)
+    res.writeHead(200,{'Content-Type':"text/html"})
+    
     const hello="Hello world!";
-    res.status(200)
-    res.status(200).json(hello)
+    res.end(hello)
+    // res.status(200)
+    // res.status(200).json(hello)
 })
 
 app.post('/add',(req,res)=>{
