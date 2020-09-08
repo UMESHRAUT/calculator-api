@@ -15,6 +15,7 @@ app.use(bodyParser.json())
 
 app.get('/',(req,res)=>{
     const hello="Hello world!";
+    res.status(200)
     res.status(200).json(hello)
 })
 
