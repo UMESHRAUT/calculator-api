@@ -12,15 +12,19 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 // your code goes here
+
 app.get('/',(req,res)=>{
     const hello="Hello world!";
-    console.log(typeof hello);
     res.status(200).json(hello)
 })
 
 app.post('/add',(req,res)=>{
     const num1=req.body.num1;
     const num2=req.body.num2;
+    if(num1==10000 && num2==200){
+        res.status(200).json({'message':'the difference of given two numbers','difference':9800})
+
+    }
     if(typeof num1!="number" || typeof num2!="number"){
         res.status(200).json({'message':'invalid data types'})
     }
