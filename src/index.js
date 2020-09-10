@@ -57,7 +57,7 @@ app.post('/sub',(req,res)=>{
         sum=Number((n2-n1).toFixed(2));
         console.log("from up");
 
-        if(sum<-1000000){
+        if(sum>1000000){
             res.status(200).json({'message':'Underflow'})
         }
         res.status(200).json({'message':'the difference of given two numbers','difference':sum})
