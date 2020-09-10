@@ -48,7 +48,7 @@ app.post('/sub',(req,res)=>{
     let n2=0;
 
     if(typeof num1!="number" || typeof num2!="number"){
-        res.status(200).json({'message':'invalid data types'})
+        res.status(200).json({'message':'Invalid data types'})
     }
 
     if(num1<0 || num2<0){
@@ -59,7 +59,7 @@ app.post('/sub',(req,res)=>{
         if(sum<-1000000){
             res.status(200).json({'message':'Underflow'})
         }
-        res.status(200).json({'message':'the difference of given two numbers','sum':sum})
+        res.status(200).json({'message':'the difference of given two numbers','difference':sum})
 
 
     }else{
@@ -70,7 +70,7 @@ app.post('/sub',(req,res)=>{
     }
 
     if(!Number.isInteger(num1) && !Number.isInteger(num2)){
-        res.status(200).json({'message':'the difference of given two numbers','sum':2.0})
+        res.status(200).json({'message':'the difference of given two numbers','difference':2.0})
     }
     // if(Number.isInteger(num1) && Number.isInteger(num2)){
     //     sum=parseInt(sum);
