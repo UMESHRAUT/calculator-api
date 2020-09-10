@@ -29,7 +29,7 @@ app.post('/add',(req,res)=>{
     const num2=req.body.num2;
 
     if(typeof num1!="number" || typeof num2!="number"){
-        res.status(200).json({'message':'invalid data types'})
+        res.status(200).json({'message':'Invalid data types'})
     }
     if(num1+num2>1000000){
         res.status(200).json({'message':'Overflow'})
