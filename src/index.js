@@ -54,8 +54,9 @@ app.post('/sub',(req,res)=>{
     if(num1<0 || num2<0){
         n1=Math.min(num1,num2);
         n2=Math.max(num1,num2);
-        sum=Number((n1-n2).toFixed(2));
+        sum=Number((n1+n2).toFixed(2));
         console.log("from up");
+
         if(sum<-1000000){
             res.status(200).json({'message':'Underflow'})
         }
